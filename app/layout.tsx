@@ -6,6 +6,11 @@ import QueryProvider from '../components/QueryProvider';
 export const metadata: Metadata = {
   title: 'E-commerce Insight | Analytics Dashboard',
   description: 'Professional e-commerce analytics dashboard for monitoring sales, conversions, and revenue metrics.',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
