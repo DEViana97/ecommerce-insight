@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "PRD-0001",
+    "name": "iPhone 15 Pro",
+    "category": "Electronics",
+    "basePrice": 8999,
+    "stock": 419,
+    "rating": 3.8,
+    "reviews": 239
+  },
+  {
+    "id": "PRD-0002",
+    "name": "Samsung Galaxy S24",
+    "category": "Electronics",
+    "basePrice": 5499,
+    "stock": 414,
+    "rating": 4.7,
+    "reviews": 2231
+  },
+  {
+    "id": "PRD-0003",
+    "name": "MacBook Air M3",
+    "category": "Electronics",
+    "basePrice": 11999,
+    "stock": 455,
+    "rating": 4.8,
+    "reviews": 989
+  },
+  {
+    "id": "PRD-0004",
+    "name": "AirPods Pro",
+    "category": "Electronics",
+    "basePrice": 1799,
+    "stock": 342,
+    "rating": 3.7,
+    "reviews": 552
+  },
+  {
+    "id": "PRD-0005",
+    "name": "iPad Pro 12.9\"",
+    "category": "Electronics",
+    "basePrice": 7499,
+    "stock": 257,
+    "rating": 4.9,
+    "reviews": 2115
+  },
+  {
+    "id": "PRD-0006",
+    "name": "Sony WH-1000XM5",
+    "category": "Electronics",
+    "basePrice": 2199,
+    "stock": 309,
+    "rating": 4,
+    "reviews": 2096
+  },
+  {
+    "id": "PRD-0007",
+    "name": "Dell XPS 15",
+    "category": "Electronics",
+    "basePrice": 9999,
+    "stock": 241,
+    "rating": 4.7,
+    "reviews": 1322
+  },
+  {
+    "id": "PRD-0008",
+    "name": "Apple Watch Ultra 2",
+    "category": "Electronics",
+    "basePrice": 5999,
+    "stock": 71,
+    "rating": 3.8,
+    "reviews": 964
+  },
+  {
+    "id": "PRD-0009",
+    "name": "NVIDIA RTX 4080",
+    "category": "Electronics",
+    "basePrice": 5499,
+    "stock": 127,
+    "rating": 4.4,
+    "reviews": 1133
+  },
+  {
+    "id": "PRD-0010",
+    "name": "LG OLED C3 65\"",
+    "category": "Electronics",
+    "basePrice": 8999,
+    "stock": 211,
+    "rating": 3.7,
+    "reviews": 1357
+  },
+  {
+    "id": "PRD-0011",
+    "name": "Camiseta Nike Dri-FIT",
+    "category": "Clothing",
+    "basePrice": 159,
+    "stock": 126,
+    "rating": 4.1,
+    "reviews": 1112
+  },
+  {
+    "id": "PRD-0012",
+    "name": "Tênis Adidas Ultraboost",
+    "category": "Clothing",
+    "basePrice": 899,
+    "stock": 9,
+    "rating": 5,
+    "reviews": 1760
+  },
+  {
+    "id": "PRD-0013",
+    "name": "Jaqueta North Face",
+    "category": "Clothing",
+    "basePrice": 1299,
+    "stock": 295,
+    "rating": 4.9,
+    "reviews": 2461
+  },
+  {
+    "id": "PRD-0014",
+    "name": "Calça Levi's 501",
+    "category": "Clothing",
+    "basePrice": 399,
+    "stock": 229,
+    "rating": 4.5,
+    "reviews": 603
+  },
+  {
+    "id": "PRD-0015",
+    "name": "Moletom Champion",
+    "category": "Clothing",
+    "basePrice": 299,
+    "stock": 277,
+    "rating": 4.7,
+    "reviews": 168
+  },
+  {
+    "id": "PRD-0016",
+    "name": "Vestido Zara Midi",
+    "category": "Clothing",
+    "basePrice": 249,
+    "stock": 348,
+    "rating": 3.5,
+    "reviews": 2137
+  },
+  {
+    "id": "PRD-0017",
+    "name": "Tênis New Balance 574",
+    "category": "Clothing",
+    "basePrice": 699,
+    "stock": 190,
+    "rating": 4.9,
+    "reviews": 1128
+  },
+  {
+    "id": "PRD-0018",
+    "name": "Polo Ralph Lauren",
+    "category": "Clothing",
+    "basePrice": 399,
+    "stock": 393,
+    "rating": 4.8,
+    "reviews": 2049
+  },
+  {
+    "id": "PRD-0019",
+    "name": "Shorts Oakley",
+    "category": "Clothing",
+    "basePrice": 199,
+    "stock": 234,
+    "rating": 4,
+    "reviews": 126
+  },
+  {
+    "id": "PRD-0020",
+    "name": "Blusa Farm Rio",
+    "category": "Clothing",
+    "basePrice": 299,
+    "stock": 420,
+    "rating": 4.1,
+    "reviews": 1946
+  },
+  {
+    "id": "PRD-0021",
+    "name": "Aspirador Dyson V15",
+    "category": "Home",
+    "basePrice": 3499,
+    "stock": 194,
+    "rating": 5,
+    "reviews": 2188
+  },
+  {
+    "id": "PRD-0022",
+    "name": "Cafeteira Nespresso",
+    "category": "Home",
+    "basePrice": 799,
+    "stock": 174,
+    "rating": 4.6,
+    "reviews": 858
+  },
+  {
+    "id": "PRD-0023",
+    "name": "Jogo de Cama Plumasul",
+    "category": "Home",
+    "basePrice": 299,
+    "stock": 174,
+    "rating": 4.4,
+    "reviews": 65
+  },
+  {
+    "id": "PRD-0024",
+    "name": "Air Fryer Philips Walita",
+    "category": "Home",
+    "basePrice": 499,
+    "stock": 144,
+    "rating": 4.1,
+    "reviews": 570
+  },
+  {
+    "id": "PRD-0025",
+    "name": "Robô Aspirador iRobot",
+    "category": "Home",
+    "basePrice": 2999,
+    "stock": 116,
+    "rating": 3.7,
+    "reviews": 2253
+  },
+  {
+    "id": "PRD-0026",
+    "name": "Luminária Ring Light",
+    "category": "Home",
+    "basePrice": 199,
+    "stock": 460,
+    "rating": 3.9,
+    "reviews": 2157
+  },
+  {
+    "id": "PRD-0027",
+    "name": "Panela Elétrica Mondial",
+    "category": "Home",
+    "basePrice": 149,
+    "stock": 476,
+    "rating": 4.3,
+    "reviews": 375
+  },
+  {
+    "id": "PRD-0028",
+    "name": "Purificador Electrolux",
+    "category": "Home",
+    "basePrice": 799,
+    "stock": 348,
+    "rating": 3.8,
+    "reviews": 1765
+  },
+  {
+    "id": "PRD-0029",
+    "name": "Mesa de Escritório Glass",
+    "category": "Home",
+    "basePrice": 699,
+    "stock": 269,
+    "rating": 3.8,
+    "reviews": 1721
+  },
+  {
+    "id": "PRD-0030",
+    "name": "Cadeira Gamer DXRacer",
+    "category": "Home",
+    "basePrice": 1999,
+    "stock": 191,
+    "rating": 4.1,
+    "reviews": 1105
+  },
+  {
+    "id": "PRD-0031",
+    "name": "Bicicleta Soul SL929",
+    "category": "Sports",
+    "basePrice": 4999,
+    "stock": 13,
+    "rating": 5,
+    "reviews": 723
+  },
+  {
+    "id": "PRD-0032",
+    "name": "Esteira Kikos F180",
+    "category": "Sports",
+    "basePrice": 3499,
+    "stock": 222,
+    "rating": 4.5,
+    "reviews": 1281
+  },
+  {
+    "id": "PRD-0033",
+    "name": "Halter Emborrachado 10kg",
+    "category": "Sports",
+    "basePrice": 149,
+    "stock": 10,
+    "rating": 3.8,
+    "reviews": 2088
+  },
+  {
+    "id": "PRD-0034",
+    "name": "Tênis Asics Kayano 30",
+    "category": "Sports",
+    "basePrice": 899,
+    "stock": 325,
+    "rating": 3.5,
+    "reviews": 2113
+  },
+  {
+    "id": "PRD-0035",
+    "name": "Bermuda Compressão Under Armour",
+    "category": "Sports",
+    "basePrice": 249,
+    "stock": 263,
+    "rating": 3.9,
+    "reviews": 1470
+  },
+  {
+    "id": "PRD-0036",
+    "name": "Mochila Osprey Talon",
+    "category": "Sports",
+    "basePrice": 699,
+    "stock": 102,
+    "rating": 3.8,
+    "reviews": 2244
+  },
+  {
+    "id": "PRD-0037",
+    "name": "Prancha de Surf 6'8\"",
+    "category": "Sports",
+    "basePrice": 1299,
+    "stock": 450,
+    "rating": 3.7,
+    "reviews": 1645
+  },
+  {
+    "id": "PRD-0038",
+    "name": "Luva de Box Everlast",
+    "category": "Sports",
+    "basePrice": 199,
+    "stock": 112,
+    "rating": 4.2,
+    "reviews": 902
+  },
+  {
+    "id": "PRD-0039",
+    "name": "Kettlebell 16kg",
+    "category": "Sports",
+    "basePrice": 299,
+    "stock": 441,
+    "rating": 4.3,
+    "reviews": 2356
+  },
+  {
+    "id": "PRD-0040",
+    "name": "Capacete Ciclismo Bell",
+    "category": "Sports",
+    "basePrice": 599,
+    "stock": 437,
+    "rating": 4.5,
+    "reviews": 1527
+  },
+  {
+    "id": "PRD-0041",
+    "name": "Clean Code - Robert Martin",
+    "category": "Books",
+    "basePrice": 89,
+    "stock": 344,
+    "rating": 4.7,
+    "reviews": 302
+  },
+  {
+    "id": "PRD-0042",
+    "name": "O Poder do Hábito",
+    "category": "Books",
+    "basePrice": 49,
+    "stock": 474,
+    "rating": 4.3,
+    "reviews": 766
+  },
+  {
+    "id": "PRD-0043",
+    "name": "Sapiens - Harari",
+    "category": "Books",
+    "basePrice": 59,
+    "stock": 382,
+    "rating": 4.4,
+    "reviews": 1788
+  },
+  {
+    "id": "PRD-0044",
+    "name": "Mindset - Carol Dweck",
+    "category": "Books",
+    "basePrice": 49,
+    "stock": 43,
+    "rating": 4.1,
+    "reviews": 1516
+  },
+  {
+    "id": "PRD-0045",
+    "name": "Design Patterns - GoF",
+    "category": "Books",
+    "basePrice": 119,
+    "stock": 462,
+    "rating": 4.1,
+    "reviews": 1020
+  },
+  {
+    "id": "PRD-0046",
+    "name": "The Pragmatic Programmer",
+    "category": "Books",
+    "basePrice": 109,
+    "stock": 271,
+    "rating": 3.6,
+    "reviews": 2133
+  },
+  {
+    "id": "PRD-0047",
+    "name": "Atomic Habits",
+    "category": "Books",
+    "basePrice": 55,
+    "stock": 115,
+    "rating": 3.9,
+    "reviews": 2302
+  },
+  {
+    "id": "PRD-0048",
+    "name": "Trabalhe 4 Horas Por Semana",
+    "category": "Books",
+    "basePrice": 45,
+    "stock": 41,
+    "rating": 3.9,
+    "reviews": 1827
+  },
+  {
+    "id": "PRD-0049",
+    "name": "Zero to One - Peter Thiel",
+    "category": "Books",
+    "basePrice": 55,
+    "stock": 77,
+    "rating": 4.6,
+    "reviews": 843
+  },
+  {
+    "id": "PRD-0050",
+    "name": "Steve Jobs - Isaacson",
+    "category": "Books",
+    "basePrice": 65,
+    "stock": 436,
+    "rating": 3.9,
+    "reviews": 152
+  },
+  {
+    "id": "PRD-0051",
+    "name": "Perfume Chanel N°5",
+    "category": "Beauty",
+    "basePrice": 799,
+    "stock": 18,
+    "rating": 4.2,
+    "reviews": 959
+  },
+  {
+    "id": "PRD-0052",
+    "name": "Kit Skin Care Neutrogena",
+    "category": "Beauty",
+    "basePrice": 199,
+    "stock": 489,
+    "rating": 4.9,
+    "reviews": 1779
+  },
+  {
+    "id": "PRD-0053",
+    "name": "Batom MAC Ruby Woo",
+    "category": "Beauty",
+    "basePrice": 119,
+    "stock": 332,
+    "rating": 4.2,
+    "reviews": 2062
+  },
+  {
+    "id": "PRD-0054",
+    "name": "Sérum Vitamina C Melanie",
+    "category": "Beauty",
+    "basePrice": 149,
+    "stock": 277,
+    "rating": 4.2,
+    "reviews": 1485
+  },
+  {
+    "id": "PRD-0055",
+    "name": "Protetor Solar Isdin 60+",
+    "category": "Beauty",
+    "basePrice": 189,
+    "stock": 247,
+    "rating": 4.1,
+    "reviews": 1696
+  },
+  {
+    "id": "PRD-0056",
+    "name": "Shampoo Kérastase",
+    "category": "Beauty",
+    "basePrice": 249,
+    "stock": 401,
+    "rating": 4.8,
+    "reviews": 648
+  },
+  {
+    "id": "PRD-0057",
+    "name": "Base MAC Studio Fix",
+    "category": "Beauty",
+    "basePrice": 189,
+    "stock": 220,
+    "rating": 3.7,
+    "reviews": 342
+  },
+  {
+    "id": "PRD-0058",
+    "name": "Óleo de Argan Moroccan",
+    "category": "Beauty",
+    "basePrice": 129,
+    "stock": 398,
+    "rating": 4.7,
+    "reviews": 1659
+  },
+  {
+    "id": "PRD-0059",
+    "name": "Esmalte Risqué",
+    "category": "Beauty",
+    "basePrice": 19,
+    "stock": 443,
+    "rating": 4.9,
+    "reviews": 1302
+  },
+  {
+    "id": "PRD-0060",
+    "name": "Mascara Maybelline Sky High",
+    "category": "Beauty",
+    "basePrice": 79,
+    "stock": 132,
+    "rating": 4.1,
+    "reviews": 2134
+  },
+  {
+    "id": "PRD-0061",
+    "name": "Shorts Oakley Max",
+    "category": "Clothing",
+    "basePrice": 216,
+    "stock": 2,
+    "rating": 3.6,
+    "reviews": 100
+  },
+  {
+    "id": "PRD-0062",
+    "name": "Mascara Maybelline Sky High Premium",
+    "category": "Beauty",
+    "basePrice": 64,
+    "stock": 114,
+    "rating": 4.5,
+    "reviews": 996
+  },
+  {
+    "id": "PRD-0063",
+    "name": "Bermuda Compressão Under Armour SE",
+    "category": "Sports",
+    "basePrice": 301,
+    "stock": 256,
+    "rating": 3.5,
+    "reviews": 1021
+  },
+  {
+    "id": "PRD-0064",
+    "name": "Tênis Adidas Ultraboost Ultra",
+    "category": "Clothing",
+    "basePrice": 1037,
+    "stock": 186,
+    "rating": 3.1,
+    "reviews": 947
+  },
+  {
+    "id": "PRD-0065",
+    "name": "iPhone 15 Pro Premium",
+    "category": "Electronics",
+    "basePrice": 7508,
+    "stock": 256,
+    "rating": 3.1,
+    "reviews": 1019
+  },
+  {
+    "id": "PRD-0066",
+    "name": "O Poder do Hábito SE",
+    "category": "Books",
+    "basePrice": 43,
+    "stock": 209,
+    "rating": 3.1,
+    "reviews": 1048
+  },
+  {
+    "id": "PRD-0067",
+    "name": "Luminária Ring Light Premium",
+    "category": "Home",
+    "basePrice": 202,
+    "stock": 227,
+    "rating": 3.4,
+    "reviews": 172
+  },
+  {
+    "id": "PRD-0068",
+    "name": "Mindset - Carol Dweck Premium",
+    "category": "Books",
+    "basePrice": 61,
+    "stock": 148,
+    "rating": 3.7,
+    "reviews": 938
+  },
+  {
+    "id": "PRD-0069",
+    "name": "Samsung Galaxy S24 Plus",
+    "category": "Electronics",
+    "basePrice": 5760,
+    "stock": 220,
+    "rating": 3.7,
+    "reviews": 748
+  },
+  {
+    "id": "PRD-0070",
+    "name": "Trabalhe 4 Horas Por Semana SE",
+    "category": "Books",
+    "basePrice": 46,
+    "stock": 235,
+    "rating": 4.9,
+    "reviews": 634
+  },
+  {
+    "id": "PRD-0071",
+    "name": "Trabalhe 4 Horas Por Semana Premium",
+    "category": "Books",
+    "basePrice": 44,
+    "stock": 214,
+    "rating": 3.9,
+    "reviews": 1369
+  },
+  {
+    "id": "PRD-0072",
+    "name": "Kettlebell 16kg Mini",
+    "category": "Sports",
+    "basePrice": 270,
+    "stock": 158,
+    "rating": 4.9,
+    "reviews": 420
+  },
+  {
+    "id": "PRD-0073",
+    "name": "LG OLED C3 65\" Mini",
+    "category": "Electronics",
+    "basePrice": 12523,
+    "stock": 111,
+    "rating": 5,
+    "reviews": 491
+  },
+  {
+    "id": "PRD-0074",
+    "name": "Esmalte Risqué Premium",
+    "category": "Beauty",
+    "basePrice": 18,
+    "stock": 208,
+    "rating": 3.9,
+    "reviews": 726
+  },
+  {
+    "id": "PRD-0075",
+    "name": "Kit Skin Care Neutrogena Max",
+    "category": "Beauty",
+    "basePrice": 179,
+    "stock": 175,
+    "rating": 4.7,
+    "reviews": 371
+  },
+  {
+    "id": "PRD-0076",
+    "name": "Mochila Osprey Talon Max",
+    "category": "Sports",
+    "basePrice": 792,
+    "stock": 53,
+    "rating": 3.4,
+    "reviews": 738
+  },
+  {
+    "id": "PRD-0077",
+    "name": "Tênis Asics Kayano 30 SE",
+    "category": "Sports",
+    "basePrice": 869,
+    "stock": 260,
+    "rating": 4.3,
+    "reviews": 1201
+  },
+  {
+    "id": "PRD-0078",
+    "name": "Mochila Osprey Talon Ultra",
+    "category": "Sports",
+    "basePrice": 558,
+    "stock": 192,
+    "rating": 4.3,
+    "reviews": 1289
+  },
+  {
+    "id": "PRD-0079",
+    "name": "Cadeira Gamer DXRacer Premium",
+    "category": "Home",
+    "basePrice": 2489,
+    "stock": 220,
+    "rating": 4.2,
+    "reviews": 780
+  },
+  {
+    "id": "PRD-0080",
+    "name": "Luva de Box Everlast Pro",
+    "category": "Sports",
+    "basePrice": 187,
+    "stock": 289,
+    "rating": 3.3,
+    "reviews": 105
+  },
+  {
+    "id": "PRD-0081",
+    "name": "Panela Elétrica Mondial Pro",
+    "category": "Home",
+    "basePrice": 120,
+    "stock": 137,
+    "rating": 4.8,
+    "reviews": 428
+  },
+  {
+    "id": "PRD-0082",
+    "name": "Design Patterns - GoF Plus",
+    "category": "Books",
+    "basePrice": 107,
+    "stock": 24,
+    "rating": 4.4,
+    "reviews": 800
+  },
+  {
+    "id": "PRD-0083",
+    "name": "Polo Ralph Lauren Lite",
+    "category": "Clothing",
+    "basePrice": 280,
+    "stock": 245,
+    "rating": 4.1,
+    "reviews": 754
+  },
+  {
+    "id": "PRD-0084",
+    "name": "Sony WH-1000XM5 Max",
+    "category": "Electronics",
+    "basePrice": 2167,
+    "stock": 206,
+    "rating": 3.5,
+    "reviews": 27
+  },
+  {
+    "id": "PRD-0085",
+    "name": "Capacete Ciclismo Bell Pro",
+    "category": "Sports",
+    "basePrice": 611,
+    "stock": 169,
+    "rating": 3.1,
+    "reviews": 1119
+  },
+  {
+    "id": "PRD-0086",
+    "name": "Shorts Oakley SE",
+    "category": "Clothing",
+    "basePrice": 216,
+    "stock": 248,
+    "rating": 3.5,
+    "reviews": 659
+  },
+  {
+    "id": "PRD-0087",
+    "name": "Óleo de Argan Moroccan Lite",
+    "category": "Beauty",
+    "basePrice": 124,
+    "stock": 299,
+    "rating": 3.7,
+    "reviews": 509
+  },
+  {
+    "id": "PRD-0088",
+    "name": "Kit Skin Care Neutrogena Lite",
+    "category": "Beauty",
+    "basePrice": 175,
+    "stock": 30,
+    "rating": 3.6,
+    "reviews": 12
+  },
+  {
+    "id": "PRD-0089",
+    "name": "Steve Jobs - Isaacson SE",
+    "category": "Books",
+    "basePrice": 72,
+    "stock": 49,
+    "rating": 4,
+    "reviews": 530
+  },
+  {
+    "id": "PRD-0090",
+    "name": "Moletom Champion Pro",
+    "category": "Clothing",
+    "basePrice": 310,
+    "stock": 5,
+    "rating": 4.9,
+    "reviews": 998
+  },
+  {
+    "id": "PRD-0091",
+    "name": "Robô Aspirador iRobot Plus",
+    "category": "Home",
+    "basePrice": 3032,
+    "stock": 7,
+    "rating": 3.5,
+    "reviews": 1109
+  },
+  {
+    "id": "PRD-0092",
+    "name": "Óleo de Argan Moroccan Max",
+    "category": "Beauty",
+    "basePrice": 141,
+    "stock": 140,
+    "rating": 3.7,
+    "reviews": 814
+  },
+  {
+    "id": "PRD-0093",
+    "name": "Shampoo Kérastase Premium",
+    "category": "Beauty",
+    "basePrice": 236,
+    "stock": 236,
+    "rating": 3.1,
+    "reviews": 33
+  },
+  {
+    "id": "PRD-0094",
+    "name": "Air Fryer Philips Walita Mini",
+    "category": "Home",
+    "basePrice": 682,
+    "stock": 220,
+    "rating": 4.8,
+    "reviews": 351
+  },
+  {
+    "id": "PRD-0095",
+    "name": "O Poder do Hábito Plus",
+    "category": "Books",
+    "basePrice": 42,
+    "stock": 208,
+    "rating": 4.9,
+    "reviews": 1179
+  },
+  {
+    "id": "PRD-0096",
+    "name": "Moletom Champion SE",
+    "category": "Clothing",
+    "basePrice": 395,
+    "stock": 250,
+    "rating": 4.3,
+    "reviews": 1118
+  },
+  {
+    "id": "PRD-0097",
+    "name": "O Poder do Hábito Ultra",
+    "category": "Books",
+    "basePrice": 43,
+    "stock": 114,
+    "rating": 4.7,
+    "reviews": 372
+  },
+  {
+    "id": "PRD-0098",
+    "name": "LG OLED C3 65\" Ultra",
+    "category": "Electronics",
+    "basePrice": 7995,
+    "stock": 187,
+    "rating": 3.8,
+    "reviews": 421
+  },
+  {
+    "id": "PRD-0099",
+    "name": "Esmalte Risqué SE",
+    "category": "Beauty",
+    "basePrice": 21,
+    "stock": 243,
+    "rating": 4.2,
+    "reviews": 898
+  },
+  {
+    "id": "PRD-0100",
+    "name": "Cadeira Gamer DXRacer Max",
+    "category": "Home",
+    "basePrice": 1924,
+    "stock": 162,
+    "rating": 3.2,
+    "reviews": 397
+  },
+  {
+    "id": "PRD-0101",
+    "name": "Esmalte Risqué SE",
+    "category": "Beauty",
+    "basePrice": 19,
+    "stock": 114,
+    "rating": 4.4,
+    "reviews": 1132
+  },
+  {
+    "id": "PRD-0102",
+    "name": "Panela Elétrica Mondial Max",
+    "category": "Home",
+    "basePrice": 173,
+    "stock": 180,
+    "rating": 3.4,
+    "reviews": 1262
+  },
+  {
+    "id": "PRD-0103",
+    "name": "Kettlebell 16kg Premium",
+    "category": "Sports",
+    "basePrice": 290,
+    "stock": 271,
+    "rating": 3.1,
+    "reviews": 73
+  },
+  {
+    "id": "PRD-0104",
+    "name": "Camiseta Nike Dri-FIT Ultra",
+    "category": "Clothing",
+    "basePrice": 219,
+    "stock": 50,
+    "rating": 4.6,
+    "reviews": 1420
+  },
+  {
+    "id": "PRD-0105",
+    "name": "NVIDIA RTX 4080 Lite",
+    "category": "Electronics",
+    "basePrice": 5578,
+    "stock": 117,
+    "rating": 3.9,
+    "reviews": 1307
+  },
+  {
+    "id": "PRD-0106",
+    "name": "Tênis New Balance 574 Lite",
+    "category": "Clothing",
+    "basePrice": 922,
+    "stock": 33,
+    "rating": 3.5,
+    "reviews": 273
+  },
+  {
+    "id": "PRD-0107",
+    "name": "Bermuda Compressão Under Armour Ultra",
+    "category": "Sports",
+    "basePrice": 318,
+    "stock": 127,
+    "rating": 3.2,
+    "reviews": 1058
+  },
+  {
+    "id": "PRD-0108",
+    "name": "Purificador Electrolux Mini",
+    "category": "Home",
+    "basePrice": 763,
+    "stock": 185,
+    "rating": 3,
+    "reviews": 68
+  },
+  {
+    "id": "PRD-0109",
+    "name": "O Poder do Hábito Pro",
+    "category": "Books",
+    "basePrice": 64,
+    "stock": 243,
+    "rating": 3.4,
+    "reviews": 568
+  },
+  {
+    "id": "PRD-0110",
+    "name": "Zero to One - Peter Thiel Mini",
+    "category": "Books",
+    "basePrice": 51,
+    "stock": 238,
+    "rating": 3.9,
+    "reviews": 1368
+  },
+  {
+    "id": "PRD-0111",
+    "name": "Mindset - Carol Dweck Pro",
+    "category": "Books",
+    "basePrice": 61,
+    "stock": 143,
+    "rating": 4,
+    "reviews": 998
+  },
+  {
+    "id": "PRD-0112",
+    "name": "Cadeira Gamer DXRacer Lite",
+    "category": "Home",
+    "basePrice": 2432,
+    "stock": 98,
+    "rating": 3.1,
+    "reviews": 793
+  },
+  {
+    "id": "PRD-0113",
+    "name": "Sapiens - Harari Premium",
+    "category": "Books",
+    "basePrice": 56,
+    "stock": 108,
+    "rating": 4.2,
+    "reviews": 1367
+  },
+  {
+    "id": "PRD-0114",
+    "name": "Shorts Oakley Max",
+    "category": "Clothing",
+    "basePrice": 259,
+    "stock": 282,
+    "rating": 4.5,
+    "reviews": 1208
+  },
+  {
+    "id": "PRD-0115",
+    "name": "Purificador Electrolux SE",
+    "category": "Home",
+    "basePrice": 728,
+    "stock": 223,
+    "rating": 4,
+    "reviews": 1356
+  },
+  {
+    "id": "PRD-0116",
+    "name": "Luminária Ring Light Premium",
+    "category": "Home",
+    "basePrice": 240,
+    "stock": 210,
+    "rating": 3.7,
+    "reviews": 974
+  },
+  {
+    "id": "PRD-0117",
+    "name": "Dell XPS 15 Pro",
+    "category": "Electronics",
+    "basePrice": 8101,
+    "stock": 169,
+    "rating": 3.9,
+    "reviews": 355
+  },
+  {
+    "id": "PRD-0118",
+    "name": "The Pragmatic Programmer Premium",
+    "category": "Books",
+    "basePrice": 145,
+    "stock": 12,
+    "rating": 3.9,
+    "reviews": 1104
+  },
+  {
+    "id": "PRD-0119",
+    "name": "Mascara Maybelline Sky High Max",
+    "category": "Beauty",
+    "basePrice": 67,
+    "stock": 297,
+    "rating": 3.4,
+    "reviews": 1217
+  },
+  {
+    "id": "PRD-0120",
+    "name": "Kettlebell 16kg Mini",
+    "category": "Sports",
+    "basePrice": 314,
+    "stock": 59,
+    "rating": 4.7,
+    "reviews": 877
+  },
+  {
+    "id": "PRD-0121",
+    "name": "Capacete Ciclismo Bell Lite",
+    "category": "Sports",
+    "basePrice": 727,
+    "stock": 285,
+    "rating": 4.2,
+    "reviews": 389
+  },
+  {
+    "id": "PRD-0122",
+    "name": "LG OLED C3 65\" Pro",
+    "category": "Electronics",
+    "basePrice": 8878,
+    "stock": 77,
+    "rating": 4.7,
+    "reviews": 374
+  },
+  {
+    "id": "PRD-0123",
+    "name": "Atomic Habits Max",
+    "category": "Books",
+    "basePrice": 72,
+    "stock": 122,
+    "rating": 4.8,
+    "reviews": 777
+  },
+  {
+    "id": "PRD-0124",
+    "name": "Sapiens - Harari Ultra",
+    "category": "Books",
+    "basePrice": 81,
+    "stock": 181,
+    "rating": 4.9,
+    "reviews": 822
+  },
+  {
+    "id": "PRD-0125",
+    "name": "Batom MAC Ruby Woo Pro",
+    "category": "Beauty",
+    "basePrice": 114,
+    "stock": 97,
+    "rating": 4.1,
+    "reviews": 638
+  },
+  {
+    "id": "PRD-0126",
+    "name": "Sony WH-1000XM5 Max",
+    "category": "Electronics",
+    "basePrice": 1615,
+    "stock": 199,
+    "rating": 4.4,
+    "reviews": 1254
+  },
+  {
+    "id": "PRD-0127",
+    "name": "Steve Jobs - Isaacson Ultra",
+    "category": "Books",
+    "basePrice": 67,
+    "stock": 49,
+    "rating": 3.3,
+    "reviews": 345
+  },
+  {
+    "id": "PRD-0128",
+    "name": "Polo Ralph Lauren Premium",
+    "category": "Clothing",
+    "basePrice": 286,
+    "stock": 142,
+    "rating": 4.4,
+    "reviews": 1479
+  },
+  {
+    "id": "PRD-0129",
+    "name": "Cadeira Gamer DXRacer Pro",
+    "category": "Home",
+    "basePrice": 1748,
+    "stock": 104,
+    "rating": 3.6,
+    "reviews": 478
+  },
+  {
+    "id": "PRD-0130",
+    "name": "Cadeira Gamer DXRacer Ultra",
+    "category": "Home",
+    "basePrice": 1589,
+    "stock": 229,
+    "rating": 3.1,
+    "reviews": 185
+  },
+  {
+    "id": "PRD-0131",
+    "name": "Vestido Zara Midi Max",
+    "category": "Clothing",
+    "basePrice": 327,
+    "stock": 100,
+    "rating": 3.1,
+    "reviews": 1158
+  },
+  {
+    "id": "PRD-0132",
+    "name": "Halter Emborrachado 10kg Mini",
+    "category": "Sports",
+    "basePrice": 161,
+    "stock": 2,
+    "rating": 4.2,
+    "reviews": 718
+  },
+  {
+    "id": "PRD-0133",
+    "name": "Panela Elétrica Mondial Premium",
+    "category": "Home",
+    "basePrice": 114,
+    "stock": 274,
+    "rating": 4,
+    "reviews": 1035
+  },
+  {
+    "id": "PRD-0134",
+    "name": "Tênis Asics Kayano 30 Lite",
+    "category": "Sports",
+    "basePrice": 679,
+    "stock": 90,
+    "rating": 5,
+    "reviews": 895
+  },
+  {
+    "id": "PRD-0135",
+    "name": "Atomic Habits Lite",
+    "category": "Books",
+    "basePrice": 58,
+    "stock": 123,
+    "rating": 4.9,
+    "reviews": 31
+  },
+  {
+    "id": "PRD-0136",
+    "name": "Mesa de Escritório Glass SE",
+    "category": "Home",
+    "basePrice": 689,
+    "stock": 135,
+    "rating": 3.8,
+    "reviews": 629
+  },
+  {
+    "id": "PRD-0137",
+    "name": "Sérum Vitamina C Melanie Plus",
+    "category": "Beauty",
+    "basePrice": 156,
+    "stock": 221,
+    "rating": 4.5,
+    "reviews": 443
+  },
+  {
+    "id": "PRD-0138",
+    "name": "Protetor Solar Isdin 60+ SE",
+    "category": "Beauty",
+    "basePrice": 171,
+    "stock": 300,
+    "rating": 4.5,
+    "reviews": 619
+  },
+  {
+    "id": "PRD-0139",
+    "name": "Moletom Champion SE",
+    "category": "Clothing",
+    "basePrice": 335,
+    "stock": 286,
+    "rating": 4.3,
+    "reviews": 348
+  },
+  {
+    "id": "PRD-0140",
+    "name": "Robô Aspirador iRobot Lite",
+    "category": "Home",
+    "basePrice": 2402,
+    "stock": 94,
+    "rating": 4.5,
+    "reviews": 594
+  },
+  {
+    "id": "PRD-0141",
+    "name": "Robô Aspirador iRobot Pro",
+    "category": "Home",
+    "basePrice": 3516,
+    "stock": 214,
+    "rating": 3.8,
+    "reviews": 1009
+  },
+  {
+    "id": "PRD-0142",
+    "name": "Protetor Solar Isdin 60+ SE",
+    "category": "Beauty",
+    "basePrice": 243,
+    "stock": 35,
+    "rating": 4.3,
+    "reviews": 567
+  },
+  {
+    "id": "PRD-0143",
+    "name": "Jaqueta North Face SE",
+    "category": "Clothing",
+    "basePrice": 1204,
+    "stock": 40,
+    "rating": 4.7,
+    "reviews": 719
+  },
+  {
+    "id": "PRD-0144",
+    "name": "Mindset - Carol Dweck Plus",
+    "category": "Books",
+    "basePrice": 68,
+    "stock": 211,
+    "rating": 3.1,
+    "reviews": 1098
+  },
+  {
+    "id": "PRD-0145",
+    "name": "Apple Watch Ultra 2 Max",
+    "category": "Electronics",
+    "basePrice": 7623,
+    "stock": 269,
+    "rating": 4.9,
+    "reviews": 1245
+  },
+  {
+    "id": "PRD-0146",
+    "name": "Protetor Solar Isdin 60+ Ultra",
+    "category": "Beauty",
+    "basePrice": 176,
+    "stock": 190,
+    "rating": 4.8,
+    "reviews": 1104
+  },
+  {
+    "id": "PRD-0147",
+    "name": "Tênis Adidas Ultraboost Premium",
+    "category": "Clothing",
+    "basePrice": 1230,
+    "stock": 249,
+    "rating": 4.3,
+    "reviews": 332
+  },
+  {
+    "id": "PRD-0148",
+    "name": "Esteira Kikos F180 Max",
+    "category": "Sports",
+    "basePrice": 4737,
+    "stock": 114,
+    "rating": 3.4,
+    "reviews": 649
+  },
+  {
+    "id": "PRD-0149",
+    "name": "Tênis Asics Kayano 30 Mini",
+    "category": "Sports",
+    "basePrice": 1066,
+    "stock": 18,
+    "rating": 4.6,
+    "reviews": 886
+  },
+  {
+    "id": "PRD-0150",
+    "name": "Esteira Kikos F180 Max",
+    "category": "Sports",
+    "basePrice": 2657,
+    "stock": 103,
+    "rating": 4.5,
+    "reviews": 342
+  },
+  {
+    "id": "PRD-0151",
+    "name": "Perfume Chanel N°5 Mini",
+    "category": "Beauty",
+    "basePrice": 1106,
+    "stock": 87,
+    "rating": 4.5,
+    "reviews": 492
+  },
+  {
+    "id": "PRD-0152",
+    "name": "Trabalhe 4 Horas Por Semana SE",
+    "category": "Books",
+    "basePrice": 48,
+    "stock": 42,
+    "rating": 4.8,
+    "reviews": 1001
+  },
+  {
+    "id": "PRD-0153",
+    "name": "Cafeteira Nespresso Mini",
+    "category": "Home",
+    "basePrice": 877,
+    "stock": 156,
+    "rating": 3.7,
+    "reviews": 825
+  },
+  {
+    "id": "PRD-0154",
+    "name": "Sapiens - Harari Pro",
+    "category": "Books",
+    "basePrice": 42,
+    "stock": 97,
+    "rating": 4.1,
+    "reviews": 53
+  },
+  {
+    "id": "PRD-0155",
+    "name": "Kettlebell 16kg Plus",
+    "category": "Sports",
+    "basePrice": 408,
+    "stock": 101,
+    "rating": 4.9,
+    "reviews": 1056
+  },
+  {
+    "id": "PRD-0156",
+    "name": "Capacete Ciclismo Bell Lite",
+    "category": "Sports",
+    "basePrice": 567,
+    "stock": 203,
+    "rating": 3.3,
+    "reviews": 525
+  },
+  {
+    "id": "PRD-0157",
+    "name": "Zero to One - Peter Thiel Plus",
+    "category": "Books",
+    "basePrice": 68,
+    "stock": 257,
+    "rating": 3.1,
+    "reviews": 362
+  },
+  {
+    "id": "PRD-0158",
+    "name": "LG OLED C3 65\" Premium",
+    "category": "Electronics",
+    "basePrice": 9051,
+    "stock": 19,
+    "rating": 3.6,
+    "reviews": 517
+  },
+  {
+    "id": "PRD-0159",
+    "name": "Perfume Chanel N°5 Pro",
+    "category": "Beauty",
+    "basePrice": 1118,
+    "stock": 273,
+    "rating": 4.3,
+    "reviews": 640
+  },
+  {
+    "id": "PRD-0160",
+    "name": "Zero to One - Peter Thiel Mini",
+    "category": "Books",
+    "basePrice": 52,
+    "stock": 244,
+    "rating": 3,
+    "reviews": 780
+  },
+  {
+    "id": "PRD-0161",
+    "name": "Esteira Kikos F180 Lite",
+    "category": "Sports",
+    "basePrice": 4485,
+    "stock": 102,
+    "rating": 4.5,
+    "reviews": 1133
+  },
+  {
+    "id": "PRD-0162",
+    "name": "Luminária Ring Light Ultra",
+    "category": "Home",
+    "basePrice": 237,
+    "stock": 145,
+    "rating": 3.4,
+    "reviews": 1347
+  },
+  {
+    "id": "PRD-0163",
+    "name": "MacBook Air M3 Premium",
+    "category": "Electronics",
+    "basePrice": 11763,
+    "stock": 166,
+    "rating": 4.4,
+    "reviews": 1356
+  },
+  {
+    "id": "PRD-0164",
+    "name": "Trabalhe 4 Horas Por Semana Ultra",
+    "category": "Books",
+    "basePrice": 63,
+    "stock": 290,
+    "rating": 4,
+    "reviews": 145
+  },
+  {
+    "id": "PRD-0165",
+    "name": "Cafeteira Nespresso SE",
+    "category": "Home",
+    "basePrice": 771,
+    "stock": 63,
+    "rating": 4,
+    "reviews": 816
+  },
+  {
+    "id": "PRD-0166",
+    "name": "Protetor Solar Isdin 60+ Plus",
+    "category": "Beauty",
+    "basePrice": 256,
+    "stock": 280,
+    "rating": 3.4,
+    "reviews": 8
+  },
+  {
+    "id": "PRD-0167",
+    "name": "MacBook Air M3 SE",
+    "category": "Electronics",
+    "basePrice": 13576,
+    "stock": 265,
+    "rating": 4.4,
+    "reviews": 1226
+  },
+  {
+    "id": "PRD-0168",
+    "name": "Batom MAC Ruby Woo SE",
+    "category": "Beauty",
+    "basePrice": 114,
+    "stock": 89,
+    "rating": 4.1,
+    "reviews": 831
+  },
+  {
+    "id": "PRD-0169",
+    "name": "Esmalte Risqué Pro",
+    "category": "Beauty",
+    "basePrice": 17,
+    "stock": 31,
+    "rating": 3.4,
+    "reviews": 940
+  },
+  {
+    "id": "PRD-0170",
+    "name": "MacBook Air M3 Max",
+    "category": "Electronics",
+    "basePrice": 12798,
+    "stock": 214,
+    "rating": 4,
+    "reviews": 273
+  },
+  {
+    "id": "PRD-0171",
+    "name": "Trabalhe 4 Horas Por Semana Ultra",
+    "category": "Books",
+    "basePrice": 40,
+    "stock": 214,
+    "rating": 3.9,
+    "reviews": 540
+  },
+  {
+    "id": "PRD-0172",
+    "name": "Samsung Galaxy S24 Plus",
+    "category": "Electronics",
+    "basePrice": 5807,
+    "stock": 52,
+    "rating": 3,
+    "reviews": 732
+  },
+  {
+    "id": "PRD-0173",
+    "name": "Samsung Galaxy S24 Max",
+    "category": "Electronics",
+    "basePrice": 5059,
+    "stock": 113,
+    "rating": 3.9,
+    "reviews": 549
+  },
+  {
+    "id": "PRD-0174",
+    "name": "NVIDIA RTX 4080 SE",
+    "category": "Electronics",
+    "basePrice": 4266,
+    "stock": 251,
+    "rating": 4.9,
+    "reviews": 943
+  },
+  {
+    "id": "PRD-0175",
+    "name": "Dell XPS 15 Mini",
+    "category": "Electronics",
+    "basePrice": 8860,
+    "stock": 183,
+    "rating": 3,
+    "reviews": 834
+  },
+  {
+    "id": "PRD-0176",
+    "name": "Mesa de Escritório Glass Ultra",
+    "category": "Home",
+    "basePrice": 888,
+    "stock": 169,
+    "rating": 4.7,
+    "reviews": 1345
+  },
+  {
+    "id": "PRD-0177",
+    "name": "Jogo de Cama Plumasul Max",
+    "category": "Home",
+    "basePrice": 380,
+    "stock": 92,
+    "rating": 4.2,
+    "reviews": 771
+  },
+  {
+    "id": "PRD-0178",
+    "name": "Jaqueta North Face Max",
+    "category": "Clothing",
+    "basePrice": 1301,
+    "stock": 143,
+    "rating": 3.9,
+    "reviews": 1481
+  },
+  {
+    "id": "PRD-0179",
+    "name": "iPad Pro 12.9\" Plus",
+    "category": "Electronics",
+    "basePrice": 8008,
+    "stock": 129,
+    "rating": 3.3,
+    "reviews": 1239
+  },
+  {
+    "id": "PRD-0180",
+    "name": "MacBook Air M3 Ultra",
+    "category": "Electronics",
+    "basePrice": 8416,
+    "stock": 214,
+    "rating": 3.7,
+    "reviews": 1171
+  },
+  {
+    "id": "PRD-0181",
+    "name": "Sapiens - Harari Plus",
+    "category": "Books",
+    "basePrice": 67,
+    "stock": 186,
+    "rating": 3.6,
+    "reviews": 1423
+  },
+  {
+    "id": "PRD-0182",
+    "name": "Protetor Solar Isdin 60+ Max",
+    "category": "Beauty",
+    "basePrice": 195,
+    "stock": 27,
+    "rating": 3,
+    "reviews": 402
+  },
+  {
+    "id": "PRD-0183",
+    "name": "iPad Pro 12.9\" Mini",
+    "category": "Electronics",
+    "basePrice": 9879,
+    "stock": 119,
+    "rating": 4.8,
+    "reviews": 811
+  },
+  {
+    "id": "PRD-0184",
+    "name": "Mascara Maybelline Sky High Ultra",
+    "category": "Beauty",
+    "basePrice": 77,
+    "stock": 242,
+    "rating": 4.4,
+    "reviews": 414
+  },
+  {
+    "id": "PRD-0185",
+    "name": "Tênis Adidas Ultraboost SE",
+    "category": "Clothing",
+    "basePrice": 1019,
+    "stock": 121,
+    "rating": 3.9,
+    "reviews": 561
+  },
+  {
+    "id": "PRD-0186",
+    "name": "Jaqueta North Face Premium",
+    "category": "Clothing",
+    "basePrice": 1031,
+    "stock": 228,
+    "rating": 3.5,
+    "reviews": 692
+  },
+  {
+    "id": "PRD-0187",
+    "name": "Kit Skin Care Neutrogena Pro",
+    "category": "Beauty",
+    "basePrice": 194,
+    "stock": 286,
+    "rating": 4.3,
+    "reviews": 1421
+  },
+  {
+    "id": "PRD-0188",
+    "name": "Panela Elétrica Mondial Lite",
+    "category": "Home",
+    "basePrice": 109,
+    "stock": 201,
+    "rating": 4.3,
+    "reviews": 718
+  },
+  {
+    "id": "PRD-0189",
+    "name": "Tênis New Balance 574 Lite",
+    "category": "Clothing",
+    "basePrice": 505,
+    "stock": 213,
+    "rating": 5,
+    "reviews": 1423
+  },
+  {
+    "id": "PRD-0190",
+    "name": "Robô Aspirador iRobot Ultra",
+    "category": "Home",
+    "basePrice": 2634,
+    "stock": 295,
+    "rating": 3.9,
+    "reviews": 1378
+  },
+  {
+    "id": "PRD-0191",
+    "name": "Air Fryer Philips Walita Max",
+    "category": "Home",
+    "basePrice": 608,
+    "stock": 299,
+    "rating": 3.4,
+    "reviews": 214
+  },
+  {
+    "id": "PRD-0192",
+    "name": "Capacete Ciclismo Bell Lite",
+    "category": "Sports",
+    "basePrice": 521,
+    "stock": 20,
+    "rating": 3.9,
+    "reviews": 333
+  },
+  {
+    "id": "PRD-0193",
+    "name": "Mochila Osprey Talon Ultra",
+    "category": "Sports",
+    "basePrice": 784,
+    "stock": 7,
+    "rating": 4,
+    "reviews": 215
+  },
+  {
+    "id": "PRD-0194",
+    "name": "The Pragmatic Programmer SE",
+    "category": "Books",
+    "basePrice": 113,
+    "stock": 208,
+    "rating": 4,
+    "reviews": 171
+  },
+  {
+    "id": "PRD-0195",
+    "name": "Tênis New Balance 574 Pro",
+    "category": "Clothing",
+    "basePrice": 970,
+    "stock": 266,
+    "rating": 3,
+    "reviews": 1500
+  },
+  {
+    "id": "PRD-0196",
+    "name": "Sérum Vitamina C Melanie Ultra",
+    "category": "Beauty",
+    "basePrice": 131,
+    "stock": 38,
+    "rating": 3.8,
+    "reviews": 393
+  },
+  {
+    "id": "PRD-0197",
+    "name": "Purificador Electrolux Pro",
+    "category": "Home",
+    "basePrice": 821,
+    "stock": 133,
+    "rating": 4.6,
+    "reviews": 1335
+  },
+  {
+    "id": "PRD-0198",
+    "name": "Jogo de Cama Plumasul Plus",
+    "category": "Home",
+    "basePrice": 334,
+    "stock": 29,
+    "rating": 4.3,
+    "reviews": 627
+  },
+  {
+    "id": "PRD-0199",
+    "name": "Mindset - Carol Dweck Plus",
+    "category": "Books",
+    "basePrice": 44,
+    "stock": 133,
+    "rating": 4.2,
+    "reviews": 828
+  },
+  {
+    "id": "PRD-0200",
+    "name": "Shampoo Kérastase Ultra",
+    "category": "Beauty",
+    "basePrice": 319,
+    "stock": 260,
+    "rating": 4.3,
+    "reviews": 999
+  }
+]
