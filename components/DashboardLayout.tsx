@@ -42,6 +42,9 @@ const Overlay = styled.div<{ $visible: boolean }>`
     inset: 0;
     background: rgba(0,0,0,0.5);
     z-index: 90;
+    opacity: ${({ $visible }) => ($visible ? 1 : 0)};
+    pointer-events: ${({ $visible }) => ($visible ? 'auto' : 'none')};
+    transition: opacity 0.25s ease;
   }
 `;
 

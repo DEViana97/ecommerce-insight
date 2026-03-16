@@ -26,7 +26,7 @@ const navItems = [
 const SIDEBAR_WIDTH = 240;
 const SIDEBAR_COLLAPSED = 70;
 
-const Wrapper = styled(motion.aside)<{ $collapsed: boolean }>`
+const Wrapper = styled(motion.aside) <{ $collapsed: boolean }>`
   position: fixed;
   left: 0;
   top: 0;
@@ -41,8 +41,9 @@ const Wrapper = styled(motion.aside)<{ $collapsed: boolean }>`
   transition: width ${({ theme }) => theme.transitions.normal};
 
   @media (max-width: 768px) {
-    transform: ${({ $collapsed }) => ($collapsed ? 'translateX(-100%)' : 'translateX(0)')};
     width: ${SIDEBAR_WIDTH}px;
+    transform: ${({ $collapsed }) => ($collapsed ? 'translateX(-100%)' : 'translateX(0)')};
+    transition: transform ${({ theme }) => theme.transitions.normal};
     box-shadow: ${({ theme }) => theme.shadows.xl};
   }
 `;
@@ -131,7 +132,7 @@ const NavIcon = styled.div<{ $active?: boolean }>`
   }
 `;
 
-const NavLabel = styled(motion.span)<{ $active?: boolean }>`
+const NavLabel = styled(motion.span) <{ $active?: boolean }>`
   font-size: 14px;
   font-weight: ${({ $active }) => ($active ? '600' : '500')};
   color: ${({ $active, theme }) => ($active ? theme.colors.sidebarTextActive : theme.colors.sidebarText)};
