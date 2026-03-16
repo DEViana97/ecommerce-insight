@@ -1,8 +1,7 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import { useQuery } from '@tanstack/react-query';
 import {
   RiMoneyDollarCircleLine,
@@ -16,7 +15,9 @@ import SalesChart from '../../components/Charts/SalesChart';
 import ConversionFunnel from '../../components/Charts/ConversionFunnel';
 import TopProducts from '../../components/Charts/TopProducts';
 import DataTable from '../../components/DataTable';
+import InsightsPanel from '../../components/InsightsPanel';
 import { formatCurrency, formatNumber, formatPercent } from '../../utils/formatCurrency';
+import { generateInsights } from '../../utils/generateInsights';
 
 const Grid = styled.div`
   display: grid;
@@ -38,16 +39,6 @@ const KPIGrid = styled.div`
 `;
 
 const ChartsRow = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const BottomRow = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -88,6 +79,19 @@ interface ProductsData {
   }[];
 }
 
+interface InsightOrder {
+  id: string;
+  productId: string;
+  productName: string;
+  total: number;
+  salesChannel: string;
+  date: string;
+}
+
+interface OrdersInsightResponse {
+  orders: InsightOrder[];
+}
+
 async function fetchSales(params: Record<string, string>): Promise<SalesData> {
   const qs = new URLSearchParams(params).toString();
   const res = await fetch(`/api/analytics/sales?${qs}`);
@@ -109,8 +113,17 @@ async function fetchProducts(params: Record<string, string>): Promise<ProductsDa
   return res.json();
 }
 
+async function fetchInsightOrders(params: Record<string, string>): Promise<OrdersInsightResponse> {
+  const qs = new URLSearchParams(params).toString();
+  const res = await fetch(`/api/orders?${qs}`);
+  if (!res.ok) throw new Error('Failed to fetch orders for insights');
+  return res.json();
+}
+
 export default function DashboardContent() {
-  const { period, channel, category } = useFiltersStore();
+  const period = useFiltersStore((s) => s.period);
+  const channel = useFiltersStore((s) => s.channel);
+  const category = useFiltersStore((s) => s.category);
 
   const params = { period, channel, category };
 
@@ -124,10 +137,32 @@ export default function DashboardContent() {
     queryFn: () => fetchConversion(params),
   });
 
-  const { data: productsData, isLoading: productsLoading } = useQuery({
+  const { data: productsData } = useQuery({
     queryKey: ['products', period, channel, category],
     queryFn: () => fetchProducts({ ...params, limit: '10' }),
   });
+
+  const { data: currentOrders, isLoading: currentOrdersLoading } = useQuery({
+    queryKey: ['insights-orders-current', period, channel, category],
+    queryFn: () => fetchInsightOrders({ ...params, limit: 'all' }),
+  });
+
+  const { data: previousOrders, isLoading: previousOrdersLoading } = useQuery({
+    queryKey: ['insights-orders-previous', period, channel, category],
+    queryFn: () => fetchInsightOrders({ ...params, limit: 'all', compare: 'previous' }),
+  });
+
+  const insights = useMemo(
+    () =>
+      generateInsights(
+        {
+          current: currentOrders?.orders ?? [],
+          previous: previousOrders?.orders ?? [],
+        },
+        { period, channel, category }
+      ),
+    [currentOrders?.orders, previousOrders?.orders, period, channel, category]
+  );
 
   const kpis = salesData?.kpis;
 
@@ -137,7 +172,8 @@ export default function DashboardContent() {
         <KPICard
           title="Receita Total"
           value={kpis ? formatCurrency(kpis.totalRevenue, true) : '—'}
-          change={kpis?.revenueChange ?? 0}
+          growth={kpis?.revenueChange ?? 0}
+          trend={!kpis ? 'neutral' : kpis.revenueChange >= 0 ? 'up' : 'down'}
           icon={RiMoneyDollarCircleLine}
           color="primary"
           delay={0}
@@ -146,7 +182,8 @@ export default function DashboardContent() {
         <KPICard
           title="Pedidos"
           value={kpis ? formatNumber(kpis.totalOrders, true) : '—'}
-          change={kpis?.ordersChange ?? 0}
+          growth={kpis?.ordersChange ?? 0}
+          trend={!kpis ? 'neutral' : kpis.ordersChange >= 0 ? 'up' : 'down'}
           icon={RiShoppingCart2Line}
           color="success"
           delay={0.1}
@@ -155,7 +192,8 @@ export default function DashboardContent() {
         <KPICard
           title="Taxa de Conversão"
           value={kpis ? formatPercent(kpis.conversionRate) : '—'}
-          change={kpis?.conversionChange ?? 0}
+          growth={kpis?.conversionChange ?? 0}
+          trend={!kpis ? 'neutral' : kpis.conversionChange >= 0 ? 'up' : 'down'}
           icon={RiPercentLine}
           color="warning"
           delay={0.2}
@@ -164,13 +202,19 @@ export default function DashboardContent() {
         <KPICard
           title="Ticket Médio"
           value={kpis ? formatCurrency(kpis.avgTicket, true) : '—'}
-          change={kpis?.avgTicketChange ?? 0}
+          growth={kpis?.avgTicketChange ?? 0}
+          trend={!kpis ? 'neutral' : kpis.avgTicketChange >= 0 ? 'up' : 'down'}
           icon={RiPriceTag3Line}
           color="info"
           delay={0.3}
           loading={salesLoading}
         />
       </KPIGrid>
+
+      <InsightsPanel
+        insights={insights}
+        loading={currentOrdersLoading || previousOrdersLoading}
+      />
 
       <SalesChart
         data={salesData?.timeSeries ?? []}

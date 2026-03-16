@@ -8,7 +8,8 @@ import { RiArrowUpLine, RiArrowDownLine } from 'react-icons/ri';
 interface KPICardProps {
   title: string;
   value: string;
-  change: number;
+  growth: number;
+  trend?: 'up' | 'down' | 'neutral';
   icon: React.ElementType;
   color: 'primary' | 'success' | 'warning' | 'info';
   delay?: number;
@@ -92,6 +93,11 @@ const ChangeIndicator = styled.div<{ $positive: boolean }>`
   border-radius: ${({ theme }) => theme.radii.full};
 `;
 
+const NeutralIndicator = styled(ChangeIndicator)`
+  color: ${({ theme }) => theme.colors.text.secondary};
+  background: ${({ theme }) => theme.colors.surfaceHover};
+`;
+
 const ChangeLabel = styled.span`
   font-size: 12px;
   color: ${({ theme }) => theme.colors.text.muted};
@@ -108,9 +114,10 @@ const SkeletonPulse = styled(motion.div)`
   border-radius: ${({ theme }) => theme.radii.sm};
 `;
 
-export default function KPICard({ title, value, change, icon: Icon, color, delay = 0, loading }: KPICardProps) {
+export default function KPICard({ title, value, growth, trend, icon: Icon, color, delay = 0, loading }: KPICardProps) {
   const { bg, color: colorKey } = colorMap[color];
-  const isPositive = change >= 0;
+  const effectiveTrend = trend ?? (growth > 0 ? 'up' : growth < 0 ? 'down' : 'neutral');
+  const isPositive = effectiveTrend === 'up';
 
   if (loading) {
     return (
@@ -164,10 +171,16 @@ export default function KPICard({ title, value, change, icon: Icon, color, delay
       </motion.div>
 
       <CardFooter>
-        <ChangeIndicator $positive={isPositive}>
-          {isPositive ? <RiArrowUpLine /> : <RiArrowDownLine />}
-          {Math.abs(change).toFixed(1)}%
-        </ChangeIndicator>
+        {effectiveTrend === 'neutral' ? (
+          <NeutralIndicator $positive>
+            0.0%
+          </NeutralIndicator>
+        ) : (
+          <ChangeIndicator $positive={isPositive}>
+            {isPositive ? <RiArrowUpLine /> : <RiArrowDownLine />}
+            {Math.abs(growth).toFixed(1)}%
+          </ChangeIndicator>
+        )}
         <ChangeLabel>vs. período anterior</ChangeLabel>
       </CardFooter>
     </Card>

@@ -29,7 +29,6 @@ export const allProducts: Product[] = productsRaw as Product[];
 
 export function getPeriodDates(period: string): { startDate: Date; compareStartDate: Date; compareEndDate: Date } {
   const endDate = new Date('2025-03-16');
-  let startDate: Date;
   let daysBack: number;
 
   switch (period) {
@@ -45,7 +44,7 @@ export function getPeriodDates(period: string): { startDate: Date; compareStartD
       break;
   }
 
-  startDate = new Date(endDate);
+  const startDate = new Date(endDate);
   startDate.setDate(startDate.getDate() - daysBack);
 
   const compareEndDate = new Date(startDate);

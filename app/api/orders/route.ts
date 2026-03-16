@@ -1,18 +1,41 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { allOrders, filterOrders } from '../../../utils/dataHelpers';
+import { allOrders, filterOrders, getPeriodDates } from '../../../utils/dataHelpers';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const period = searchParams.get('period') || '30d';
+  const compare = searchParams.get('compare') || 'current';
   const channel = searchParams.get('channel') || 'all';
   const category = searchParams.get('category') || 'all';
   const search = searchParams.get('search') || '';
   const page = parseInt(searchParams.get('page') || '1', 10);
-  const limit = parseInt(searchParams.get('limit') || '10', 10);
+  const limitParam = searchParams.get('limit') || '10';
+  const limit = limitParam === 'all' ? Number.MAX_SAFE_INTEGER : parseInt(limitParam, 10);
+  const startDateParam = searchParams.get('startDate');
+  const endDateParam = searchParams.get('endDate');
   const sortBy = searchParams.get('sortBy') || 'date';
   const sortDir = searchParams.get('sortDir') || 'desc';
 
-  let orders = filterOrders(allOrders, { period, channel, category });
+  let orders;
+
+  if (startDateParam && endDateParam) {
+    orders = filterOrders(allOrders, {
+      startDate: new Date(startDateParam),
+      endDate: new Date(endDateParam),
+      channel,
+      category,
+    });
+  } else if (compare === 'previous') {
+    const { compareStartDate, compareEndDate } = getPeriodDates(period);
+    orders = filterOrders(allOrders, {
+      startDate: compareStartDate,
+      endDate: compareEndDate,
+      channel,
+      category,
+    });
+  } else {
+    orders = filterOrders(allOrders, { period, channel, category });
+  }
 
   if (search) {
     const s = search.toLowerCase();
@@ -40,8 +63,8 @@ export async function GET(request: NextRequest) {
   });
 
   const total = orders.length;
-  const totalPages = Math.ceil(total / limit);
-  const paginated = orders.slice((page - 1) * limit, page * limit);
+  const totalPages = limit === Number.MAX_SAFE_INTEGER ? 1 : Math.ceil(total / limit);
+  const paginated = limit === Number.MAX_SAFE_INTEGER ? orders : orders.slice((page - 1) * limit, page * limit);
 
-  return NextResponse.json({ orders: paginated, total, totalPages, page, limit });
+  return NextResponse.json({ orders: paginated, total, totalPages, page, limit: limitParam });
 }

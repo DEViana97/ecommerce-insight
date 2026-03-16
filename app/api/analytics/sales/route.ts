@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { allOrders, filterOrders, getPeriodDates, computeKPIs } from '../../../../utils/dataHelpers';
+import { calculateGrowthPercent } from '../../../../utils/calculateGrowth';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -20,11 +21,6 @@ export async function GET(request: NextRequest) {
 
   const currentKPIs = computeKPIs(currentOrders);
   const previousKPIs = computeKPIs(previousOrders);
-
-  function pctChange(curr: number, prev: number) {
-    if (prev === 0) return curr > 0 ? 100 : 0;
-    return ((curr - prev) / prev) * 100;
-  }
 
   // Build time series data
   let timeSeries: { date: string; revenue: number; orders: number }[] = [];
@@ -90,10 +86,10 @@ export async function GET(request: NextRequest) {
       totalOrders: currentKPIs.totalOrders,
       avgTicket: currentKPIs.avgTicket,
       conversionRate: currentKPIs.conversionRate,
-      revenueChange: pctChange(currentKPIs.totalRevenue, previousKPIs.totalRevenue),
-      ordersChange: pctChange(currentKPIs.totalOrders, previousKPIs.totalOrders),
-      avgTicketChange: pctChange(currentKPIs.avgTicket, previousKPIs.avgTicket),
-      conversionChange: pctChange(currentKPIs.conversionRate, previousKPIs.conversionRate),
+      revenueChange: calculateGrowthPercent(currentKPIs.totalRevenue, previousKPIs.totalRevenue),
+      ordersChange: calculateGrowthPercent(currentKPIs.totalOrders, previousKPIs.totalOrders),
+      avgTicketChange: calculateGrowthPercent(currentKPIs.avgTicket, previousKPIs.avgTicket),
+      conversionChange: calculateGrowthPercent(currentKPIs.conversionRate, previousKPIs.conversionRate),
     },
     timeSeries,
     channelBreakdown,

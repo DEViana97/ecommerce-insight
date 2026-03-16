@@ -298,7 +298,7 @@ export default function DataTable() {
     setPage(1);
   }
 
-  function SortIndicator({ field }: { field: SortField }) {
+  function renderSortIndicator(field: SortField) {
     if (sortBy !== field) {
       return (
         <SortIcon>
@@ -351,17 +351,17 @@ export default function DataTable() {
             <tr>
               <Th>Pedido</Th>
               <Th $sortable onClick={() => handleSort('productName')}>
-                <ThContent>Produto <SortIndicator field="productName" /></ThContent>
+                <ThContent>Produto {renderSortIndicator('productName')}</ThContent>
               </Th>
               <Th $sortable onClick={() => handleSort('customer')}>
-                <ThContent>Cliente <SortIndicator field="customer" /></ThContent>
+                <ThContent>Cliente {renderSortIndicator('customer')}</ThContent>
               </Th>
               <Th $sortable onClick={() => handleSort('total')}>
-                <ThContent>Valor <SortIndicator field="total" /></ThContent>
+                <ThContent>Valor {renderSortIndicator('total')}</ThContent>
               </Th>
               <Th>Canal</Th>
               <Th $sortable onClick={() => handleSort('date')}>
-                <ThContent>Data <SortIndicator field="date" /></ThContent>
+                <ThContent>Data {renderSortIndicator('date')}</ThContent>
               </Th>
             </tr>
           </thead>
