@@ -34,16 +34,16 @@ model Customer {
 }
 
 model Order {
-  id          String   @id @default(uuid())
-  productId   String
-  customerId  String
-  total       Float
-  quantity    Int
-  salesChannel String  @default("organic")
-  date        DateTime
+  id           String   @id @default(uuid())
+  productId    String
+  customerId   String
+  total        Float
+  quantity     Int
+  salesChannel String   @default("organic")
+  date         DateTime
 
-  product   Product   @relation(fields: [productId], references: [id])
-  customer  Customer  @relation(fields: [customerId], references: [id])
+  product  Product  @relation(fields: [productId], references: [id])
+  customer Customer @relation(fields: [customerId], references: [id])
 }
 
 enum Role {

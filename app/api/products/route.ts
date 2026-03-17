@@ -90,11 +90,11 @@ export async function GET(request: NextRequest) {
 
   const where = search
     ? {
-        OR: [
-          { name: { contains: search } },
-          { category: { contains: search } },
-        ],
-      }
+      OR: [
+        { name: { contains: search } },
+        { category: { contains: search } },
+      ],
+    }
     : undefined;
 
   const [total, products] = await Promise.all([

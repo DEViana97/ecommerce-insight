@@ -102,7 +102,7 @@ const Nav = styled.nav`
   overflow-x: hidden;
 `;
 
-const NavItem = styled(Link)<{ $active?: boolean; $collapsed?: boolean }>`
+const NavItem = styled(Link) <{ $active?: boolean; $collapsed?: boolean }>`
   display: flex;
   align-items: center;
   gap: 12px;

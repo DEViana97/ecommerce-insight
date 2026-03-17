@@ -44,12 +44,12 @@ export async function GET(request: NextRequest) {
       ...(category !== 'all' ? { product: { category } } : {}),
       ...(search
         ? {
-            OR: [
-              { id: { contains: search } },
-              { product: { name: { contains: search } } },
-              { customer: { name: { contains: search } } },
-            ],
-          }
+          OR: [
+            { id: { contains: search } },
+            { product: { name: { contains: search } } },
+            { customer: { name: { contains: search } } },
+          ],
+        }
         : {}),
     },
     include: {

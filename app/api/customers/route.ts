@@ -9,11 +9,11 @@ export async function GET(request: NextRequest) {
 
   const where = search
     ? {
-        OR: [
-          { name: { contains: search } },
-          { email: { contains: search } },
-        ],
-      }
+      OR: [
+        { name: { contains: search } },
+        { email: { contains: search } },
+      ],
+    }
     : undefined;
 
   const [total, customers] = await Promise.all([
