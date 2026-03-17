@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { motion } from 'framer-motion';
 import {
@@ -95,7 +95,12 @@ function CustomTooltipContent({ active, payload }: any) {
 }
 
 export default function ConversionFunnel({ data }: ConversionFunnelProps) {
+  const [mounted, setMounted] = useState(false);
   const theme = useTheme() as Theme;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const colors = [
     theme.colors.chart.primary,
@@ -117,32 +122,34 @@ export default function ConversionFunnel({ data }: ConversionFunnelProps) {
       </ChartHeader>
 
       <ChartWrapper>
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data} margin={{ top: 5, right: 10, left: 0, bottom: 0 }} layout="vertical">
-            <CartesianGrid strokeDasharray="3 3" stroke={theme.colors.border} horizontal={false} />
-            <XAxis
-              type="number"
-              tick={{ fontSize: 11, fill: theme.colors.text.muted }}
-              axisLine={false}
-              tickLine={false}
-              tickFormatter={(v) => (v >= 1000 ? `${(v / 1000).toFixed(0)}K` : String(v))}
-            />
-            <YAxis
-              dataKey="stage"
-              type="category"
-              tick={{ fontSize: 11, fill: theme.colors.text.muted }}
-              axisLine={false}
-              tickLine={false}
-              width={120}
-            />
-            <Tooltip content={<CustomTooltipContent />} cursor={{ fill: `${theme.colors.primary}10` }} />
-            <Bar dataKey="value" radius={[0, 6, 6, 0]}>
-              {data.map((_, index) => (
-                <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
+        {mounted ? (
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={data} margin={{ top: 5, right: 10, left: 0, bottom: 0 }} layout="vertical">
+              <CartesianGrid strokeDasharray="3 3" stroke={theme.colors.border} horizontal={false} />
+              <XAxis
+                type="number"
+                tick={{ fontSize: 11, fill: theme.colors.text.muted }}
+                axisLine={false}
+                tickLine={false}
+                tickFormatter={(v) => (v >= 1000 ? `${(v / 1000).toFixed(0)}K` : String(v))}
+              />
+              <YAxis
+                dataKey="stage"
+                type="category"
+                tick={{ fontSize: 11, fill: theme.colors.text.muted }}
+                axisLine={false}
+                tickLine={false}
+                width={120}
+              />
+              <Tooltip content={<CustomTooltipContent />} cursor={{ fill: `${theme.colors.primary}10` }} />
+              <Bar dataKey="value" radius={[0, 6, 6, 0]}>
+                {data.map((_, index) => (
+                  <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        ) : null}
       </ChartWrapper>
     </ChartCard>
   );

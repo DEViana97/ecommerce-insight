@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { motion } from 'framer-motion';
 import {
@@ -131,7 +131,12 @@ function CustomTooltip({ active, payload, label, period, metric }: any) {
 
 export default function SalesChart({ data, period, loading }: SalesChartProps) {
   const [metric, setMetric] = useState<'revenue' | 'orders'>('revenue');
+  const [mounted, setMounted] = useState(false);
   const theme = useTheme() as Theme;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const formattedData = data.map((d) => ({
     ...d,
@@ -156,48 +161,50 @@ export default function SalesChart({ data, period, loading }: SalesChartProps) {
       </ChartHeader>
 
       <ChartWrapper>
-        <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={formattedData} margin={{ top: 5, right: 10, left: 0, bottom: 0 }}>
-            <defs>
-              <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor={theme.colors.chart.primary} stopOpacity={0.2} />
-                <stop offset="95%" stopColor={theme.colors.chart.primary} stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke={theme.colors.border} vertical={false} />
-            <XAxis
-              dataKey="label"
-              tick={{ fontSize: 11, fill: theme.colors.text.muted }}
-              axisLine={false}
-              tickLine={false}
-              interval={step - 1}
-            />
-            <YAxis
-              tick={{ fontSize: 11, fill: theme.colors.text.muted }}
-              axisLine={false}
-              tickLine={false}
-              tickFormatter={(v) =>
-                metric === 'revenue'
-                  ? `R$${v >= 1000 ? `${(v / 1000).toFixed(0)}K` : v}`
-                  : String(v)
-              }
-              width={55}
-            />
-            <Tooltip
-              content={(props) => <CustomTooltip {...props} period={period} metric={metric} />}
-              cursor={{ stroke: theme.colors.border, strokeWidth: 1 }}
-            />
-            <Area
-              type="monotone"
-              dataKey={metric}
-              stroke={theme.colors.chart.primary}
-              strokeWidth={2.5}
-              fill="url(#colorRevenue)"
-              dot={false}
-              activeDot={{ r: 5, fill: theme.colors.chart.primary, stroke: theme.colors.surface, strokeWidth: 2 }}
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+        {mounted ? (
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={formattedData} margin={{ top: 5, right: 10, left: 0, bottom: 0 }}>
+              <defs>
+                <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor={theme.colors.chart.primary} stopOpacity={0.2} />
+                  <stop offset="95%" stopColor={theme.colors.chart.primary} stopOpacity={0} />
+                </linearGradient>
+              </defs>
+              <CartesianGrid strokeDasharray="3 3" stroke={theme.colors.border} vertical={false} />
+              <XAxis
+                dataKey="label"
+                tick={{ fontSize: 11, fill: theme.colors.text.muted }}
+                axisLine={false}
+                tickLine={false}
+                interval={step - 1}
+              />
+              <YAxis
+                tick={{ fontSize: 11, fill: theme.colors.text.muted }}
+                axisLine={false}
+                tickLine={false}
+                tickFormatter={(v) =>
+                  metric === 'revenue'
+                    ? `R$${v >= 1000 ? `${(v / 1000).toFixed(0)}K` : v}`
+                    : String(v)
+                }
+                width={55}
+              />
+              <Tooltip
+                content={(props) => <CustomTooltip {...props} period={period} metric={metric} />}
+                cursor={{ stroke: theme.colors.border, strokeWidth: 1 }}
+              />
+              <Area
+                type="monotone"
+                dataKey={metric}
+                stroke={theme.colors.chart.primary}
+                strokeWidth={2.5}
+                fill="url(#colorRevenue)"
+                dot={false}
+                activeDot={{ r: 5, fill: theme.colors.chart.primary, stroke: theme.colors.surface, strokeWidth: 2 }}
+              />
+            </AreaChart>
+          </ResponsiveContainer>
+        ) : null}
       </ChartWrapper>
     </ChartCard>
   );

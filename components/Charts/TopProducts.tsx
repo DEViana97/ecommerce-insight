@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { motion } from 'framer-motion';
 import {
@@ -117,7 +117,12 @@ function truncateName(name: string, maxLen = 18): string {
 
 export default function TopProducts({ data }: TopProductsProps) {
   const [metric, setMetric] = useState<'revenue' | 'units'>('revenue');
+  const [mounted, setMounted] = useState(false);
   const theme = useTheme() as Theme;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const chartData = data.slice(0, 8).map((p) => ({
     ...p,
@@ -139,40 +144,42 @@ export default function TopProducts({ data }: TopProductsProps) {
       </ChartHeader>
 
       <ChartWrapper>
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={chartData} margin={{ top: 5, right: 10, left: 0, bottom: 30 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke={theme.colors.border} vertical={false} />
-            <XAxis
-              dataKey="shortName"
-              tick={{ fontSize: 10, fill: theme.colors.text.muted }}
-              axisLine={false}
-              tickLine={false}
-              angle={-35}
-              textAnchor="end"
-              height={50}
-            />
-            <YAxis
-              tick={{ fontSize: 11, fill: theme.colors.text.muted }}
-              axisLine={false}
-              tickLine={false}
-              tickFormatter={(v) =>
-                metric === 'revenue'
-                  ? `R$${v >= 1000 ? `${(v / 1000).toFixed(0)}K` : v}`
-                  : String(v)
-              }
-              width={55}
-            />
-            <Tooltip
-              content={(props) => <CustomTooltipContent {...props} metric={metric} />}
-              cursor={{ fill: `${theme.colors.secondary}15` }}
-            />
-            <Bar
-              dataKey={metric}
-              fill={theme.colors.chart.secondary}
-              radius={[6, 6, 0, 0]}
-            />
-          </BarChart>
-        </ResponsiveContainer>
+        {mounted ? (
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={chartData} margin={{ top: 5, right: 10, left: 0, bottom: 30 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke={theme.colors.border} vertical={false} />
+              <XAxis
+                dataKey="shortName"
+                tick={{ fontSize: 10, fill: theme.colors.text.muted }}
+                axisLine={false}
+                tickLine={false}
+                angle={-35}
+                textAnchor="end"
+                height={50}
+              />
+              <YAxis
+                tick={{ fontSize: 11, fill: theme.colors.text.muted }}
+                axisLine={false}
+                tickLine={false}
+                tickFormatter={(v) =>
+                  metric === 'revenue'
+                    ? `R$${v >= 1000 ? `${(v / 1000).toFixed(0)}K` : v}`
+                    : String(v)
+                }
+                width={55}
+              />
+              <Tooltip
+                content={(props) => <CustomTooltipContent {...props} metric={metric} />}
+                cursor={{ fill: `${theme.colors.secondary}15` }}
+              />
+              <Bar
+                dataKey={metric}
+                fill={theme.colors.chart.secondary}
+                radius={[6, 6, 0, 0]}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        ) : null}
       </ChartWrapper>
     </ChartCard>
   );
