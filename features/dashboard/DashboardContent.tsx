@@ -108,7 +108,7 @@ async function fetchConversion(params: Record<string, string>): Promise<Conversi
 
 async function fetchProducts(params: Record<string, string>): Promise<ProductsData> {
   const qs = new URLSearchParams(params).toString();
-  const res = await fetch(`/api/products?${qs}`);
+  const res = await fetch(`/api/products?mode=ranking&${qs}`);
   if (!res.ok) throw new Error('Failed to fetch products');
   return res.json();
 }
