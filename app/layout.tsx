@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import StyledComponentsRegistry from '../styles/StyledComponentsRegistry';
 import ThemeProvider from '../components/ThemeProvider';
 import QueryProvider from '../components/QueryProvider';
+import AuthBootstrap from '../components/AuthBootstrap';
 
 export const metadata: Metadata = {
   title: 'E-commerce Insight | Analytics Dashboard',
@@ -27,7 +28,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning>
         <StyledComponentsRegistry>
           <QueryProvider>
-            <ThemeProvider>{children}</ThemeProvider>
+            <ThemeProvider>
+              <AuthBootstrap />
+              {children}
+            </ThemeProvider>
           </QueryProvider>
         </StyledComponentsRegistry>
       </body>
