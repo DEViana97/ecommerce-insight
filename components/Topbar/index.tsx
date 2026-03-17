@@ -13,7 +13,9 @@ import {
   RiArrowDownSLine,
   RiDownloadLine,
 } from 'react-icons/ri';
+import { useRouter } from 'next/navigation';
 import { useFiltersStore, Period } from '../../store/filtersStore';
+import { useAuthStore } from '../../store/authStore';
 import { exportCSV } from '../../utils/exportCSV';
 import { exportPDF } from '../../utils/exportPDF';
 
@@ -303,6 +305,8 @@ const PERIOD_OPTIONS: { label: string; value: Period }[] = [
 ];
 
 export default function Topbar() {
+  const router = useRouter();
+
   const sidebarCollapsed = useFiltersStore((s) => s.sidebarCollapsed);
   const toggleSidebar = useFiltersStore((s) => s.toggleSidebar);
   const period = useFiltersStore((s) => s.period);
@@ -313,6 +317,9 @@ export default function Topbar() {
   const toggleTheme = useFiltersStore((s) => s.toggleTheme);
   const searchQuery = useFiltersStore((s) => s.searchQuery);
   const setSearchQuery = useFiltersStore((s) => s.setSearchQuery);
+
+  const user = useAuthStore((s) => s.user);
+  const logout = useAuthStore((s) => s.logout);
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
@@ -388,6 +395,12 @@ export default function Topbar() {
     }
   }
 
+  async function handleLogout() {
+    await logout();
+    router.push('/login');
+    router.refresh();
+  }
+
   return (
     <TopbarWrapper $collapsed={sidebarCollapsed}>
       <MobileMenuBtn onClick={toggleSidebar}>
@@ -456,13 +469,13 @@ export default function Topbar() {
         <NotificationDot />
       </IconBtn>
 
-      <UserAvatar>
+      <UserAvatar onClick={handleLogout} title="Sair">
         <AvatarCircle>
           <RiUser3Line />
         </AvatarCircle>
         <UserInfo>
-          <UserName>Mateus Lima</UserName>
-          <UserRole>Admin</UserRole>
+          <UserName>{user?.name || 'Usuario'}</UserName>
+          <UserRole>{user?.role || 'Convidado'}</UserRole>
         </UserInfo>
         <RiArrowDownSLine style={{ color: 'var(--text-muted)', fontSize: '14px' }} />
       </UserAvatar>

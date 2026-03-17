@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -8,7 +10,7 @@ import {
   RiLineChartLine,
   RiShoppingBag3Line,
   RiGroupLine,
-  RiFileChartLine,
+  RiAdminLine,
   RiMenuFoldLine,
   RiMenuUnfoldLine,
   RiStore2Line,
@@ -16,11 +18,11 @@ import {
 import { useFiltersStore } from '../../store/filtersStore';
 
 const navItems = [
-  { label: 'Dashboard', icon: RiDashboardLine, href: '/' },
-  { label: 'Vendas', icon: RiLineChartLine, href: '/vendas' },
-  { label: 'Produtos', icon: RiShoppingBag3Line, href: '/produtos' },
-  { label: 'Clientes', icon: RiGroupLine, href: '/clientes' },
-  { label: 'Relatórios', icon: RiFileChartLine, href: '/relatorios' },
+  { label: 'Dashboard', icon: RiDashboardLine, href: '/dashboard' },
+  { label: 'Vendas', icon: RiLineChartLine, href: '/dashboard/sales' },
+  { label: 'Produtos', icon: RiShoppingBag3Line, href: '/dashboard/products' },
+  { label: 'Clientes', icon: RiGroupLine, href: '/dashboard/customers' },
+  { label: 'Admin', icon: RiAdminLine, href: '/admin' },
 ];
 
 const SIDEBAR_WIDTH = 240;
@@ -100,7 +102,7 @@ const Nav = styled.nav`
   overflow-x: hidden;
 `;
 
-const NavItem = styled.a<{ $active?: boolean; $collapsed?: boolean }>`
+const NavItem = styled(Link)<{ $active?: boolean; $collapsed?: boolean }>`
   display: flex;
   align-items: center;
   gap: 12px;
@@ -188,7 +190,7 @@ const CollapseButton = styled.button<{ $collapsed: boolean }>`
 
 export default function Sidebar() {
   const { sidebarCollapsed, toggleSidebar } = useFiltersStore();
-  const activeHref = '/';
+  const pathname = usePathname();
 
   return (
     <Wrapper $collapsed={sidebarCollapsed} layout>
@@ -213,7 +215,7 @@ export default function Sidebar() {
 
       <Nav>
         {navItems.map((item) => {
-          const isActive = activeHref === item.href;
+          const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
           return (
             <NavItem
               key={item.href}
