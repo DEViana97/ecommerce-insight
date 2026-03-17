@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { verifyToken } from './lib/auth';
+import { verifyTokenEdge } from './lib/auth-edge';
 
 const protectedRoutes = ['/dashboard', '/profile', '/admin'];
 
@@ -7,7 +7,7 @@ function isProtected(pathname: string): boolean {
   return protectedRoutes.some((route) => pathname === route || pathname.startsWith(`${route}/`));
 }
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (!isProtected(pathname)) {
@@ -21,7 +21,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
-  const payload = verifyToken(token);
+  const payload = await verifyTokenEdge(token);
   if (!payload) {
     const loginUrl = new URL('/login', request.url);
     loginUrl.searchParams.set('redirect', pathname);

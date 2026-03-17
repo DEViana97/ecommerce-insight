@@ -1,7 +1,6 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import styled from 'styled-components';
 import { useAuthStore } from '../../store/authStore';
 const Wrapper = styled.main`
@@ -50,7 +49,6 @@ const Message = styled.p`
 `;
 
 export default function LoginPage() {
-  const router = useRouter();
   const fetchMe = useAuthStore((s) => s.fetchMe);
 
   const [email, setEmail] = useState('admin@ecommerce-insight.com');
@@ -76,8 +74,7 @@ export default function LoginPage() {
     }
 
     await fetchMe();
-    router.push('/dashboard');
-    router.refresh();
+    window.location.href = '/dashboard';
   }
 
   return (
